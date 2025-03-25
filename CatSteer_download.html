@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Download</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #f3f3f3 1px, transparent 1px),
+                        linear-gradient(180deg, #f3f3f3 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .container {
+            text-align: center;
+        }
+        .logo {
+            width: 400px;
+            height: auto;
+        }
+        .password-input {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="CatSteer_logo.png" alt="Logo" class="logo">
+        <div class="password-input">
+            <input type="password" id="password" placeholder="Enter password">
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+    </div>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            if (password === 'Allianz123') {
+                window.location.href = 'file:///C:/Users/James/Documents/Workspaces/CatSteer/Packaging/CatSteer_Package/dist/CatSteer-0.1-py3-none-any.whl'; // Replace with the actual folder URL
+            } else {
+                alert('Incorrect password');
+            }
+        }
+    </script>
+</body>
+</html>
